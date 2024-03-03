@@ -6,5 +6,6 @@
 * The project simulates an ongoing software project for a desktop application (called _MatchMate_) used for managing classmate contacts, their skills, and forming teams.
   * It is **written in OOP fashion**. It provides a **reasonably well-written** code base **bigger** than what students usually write in beginner-level SE modules, without being overwhelmingly big.
   * It comes with a **reasonable level of user and developer documentation**.
+  * It is built off the AddressBook-Level3 project, simulating the brownfield process of working with an existing codebase.
 * For the detailed documentation of this project, see the **[MatchMate Product Website](https://nus-cs2103-ay2324s2.github.io/tp/)**.
 * This project is based on the AddressBook-Level3 project created by the [SE-EDU initiative](https://se-education.org).
