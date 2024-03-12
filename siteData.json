@@ -62,7 +62,7 @@
         "glossary": "Glossary",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
-        "deleting-a-person": "Deleting a person",
+        "deleting-a-coursemate": "Deleting a courseMate",
         "saving-data": "Saving data"
       },
       "headingKeywords": {}
@@ -110,9 +110,9 @@
         "quick-start": "Quick start",
         "features": "Features",
         "viewing-help-help": "Viewing help : help",
-        "adding-a-person-add": "Adding a person: add",
-        "listing-all-persons-list": "Listing all persons : list",
-        "editing-a-person-edit": "Editing a person : edit",
+        "adding-a-coursemate-add": "Adding a courseMate: add",
+        "listing-all-coursemates-list": "Listing all courseMates : list",
+        "editing-a-coursemate-edit": "Editing a courseMate : edit",
         "add-a-skill-to-a-contact-add-skill": "Add a skill to a contact : add-skill",
         "delete-a-skill-from-a-contact-delete-skill": "Delete a skill from a contact  : delete-skill",
         "search-contacts-with-a-keyword-find": "Search contacts with a keyword: find",
