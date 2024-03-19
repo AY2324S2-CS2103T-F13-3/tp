@@ -51,11 +51,9 @@ public class MatchMateParser {
 
         final String commandWord = matcher.group("commandWord");
         final String arguments = matcher.group("arguments");
-
         if (!isValidArgument(arguments)) {
             throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));
         }
-
         // Note to developers: Change the log level in config.json to enable lower level (i.e., FINE, FINER and lower)
         // log messages such as the one below.
         // Lower level log messages are used sparingly to minimize noise in the code.
@@ -109,7 +107,6 @@ public class MatchMateParser {
             int start = 0;
             while (start >= 0) {
                 start = argsString.indexOf(" " + prefix, start);
-
                 // No more occurrences are found
                 if (start == -1) {
                     break;

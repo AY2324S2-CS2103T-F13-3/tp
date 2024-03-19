@@ -32,15 +32,13 @@ public class EditCommandParser implements Parser<EditCommand> {
         requireNonNull(args);
         ArgumentMultimap argMultimap =
                 ArgumentTokenizer.tokenize(args, PREFIX_NAME, PREFIX_PHONE, PREFIX_EMAIL, PREFIX_SKILL);
-
         Index index;
-
         try {
             index = ParserUtil.parseIndex(argMultimap.getPreamble());
+            System.out.println(index.getZeroBased());
         } catch (ParseException pe) {
             throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, EditCommand.MESSAGE_USAGE), pe);
         }
-
         argMultimap.verifyNoDuplicatePrefixesFor(PREFIX_NAME, PREFIX_PHONE, PREFIX_EMAIL);
 
         EditCourseMateDescriptor editCourseMateDescriptor = new EditCourseMateDescriptor();

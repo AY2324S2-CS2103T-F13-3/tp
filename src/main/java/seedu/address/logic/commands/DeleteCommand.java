@@ -10,6 +10,7 @@ import seedu.address.logic.Messages;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.coursemate.CourseMate;
+import seedu.address.ui.MainWindow;
 
 /**
  * Deletes a courseMate identified using it's displayed index from the contact list.
@@ -40,7 +41,13 @@ public class DeleteCommand extends Command {
             throw new CommandException(Messages.MESSAGE_INVALID_COURSE_MATE_DISPLAYED_INDEX);
         }
 
-        CourseMate courseMateToDelete = lastShownList.get(targetIndex.getZeroBased());
+        CourseMate courseMateToDelete;
+        if (targetIndex.getZeroBased() == -1) {
+            courseMateToDelete = MainWindow.recentCourseMate;
+        } else {
+            courseMateToDelete = lastShownList.get(targetIndex.getZeroBased());
+        }
+
         model.deleteCourseMate(courseMateToDelete);
         model.setRecentlyProcessedCourseMate(courseMateToDelete);
         return new CommandResult(MESSAGE_DELETE_COURSE_MATE_SUCCESS, false, false, true);

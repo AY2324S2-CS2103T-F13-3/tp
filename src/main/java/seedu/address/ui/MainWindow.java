@@ -26,6 +26,9 @@ public class MainWindow extends UiPart<Stage> {
 
     private static final String FXML = "MainWindow.fxml";
 
+    // This field is to keep track which courseMate was last "edited" and showed in the DetailPanel
+    public static CourseMate recentCourseMate;
+
     private final Logger logger = LogsCenter.getLogger(getClass());
 
     private Stage primaryStage;
@@ -68,6 +71,7 @@ public class MainWindow extends UiPart<Stage> {
         // Set dependencies
         this.primaryStage = primaryStage;
         this.logic = logic;
+        recentCourseMate = logic.getFilteredCourseMateList().get(0);
 
         // Configure the UI
         setWindowDefaultSize(logic.getGuiSettings());
@@ -122,7 +126,7 @@ public class MainWindow extends UiPart<Stage> {
         courseMateListPanel = new CourseMateListPanel(logic.getFilteredCourseMateList(), this);
         courseMateListPanelPlaceholder.getChildren().add(courseMateListPanel.getRoot());
 
-        courseMateDetailPanel = new CourseMateDetailPanel(logic.getFilteredCourseMateList().get(0));
+        courseMateDetailPanel = new CourseMateDetailPanel(recentCourseMate);
         courseMateDetailPanelPlaceholder.getChildren().add(courseMateDetailPanel.getRoot());
 
         groupListPanel = new GroupListPanel(logic.getFilteredGroupList());
@@ -202,7 +206,8 @@ public class MainWindow extends UiPart<Stage> {
             }
 
             if (commandResult.isShowCourseMate()) {
-                courseMateDetailPanel.loadCourseMate(logic.getRecentlyProcessedCourseMate());
+                recentCourseMate = logic.getRecentlyProcessedCourseMate();
+                courseMateDetailPanel.loadCourseMate(recentCourseMate);
             }
 
             return commandResult;
@@ -217,7 +222,16 @@ public class MainWindow extends UiPart<Stage> {
      * Handles selection change in the course mate list panel.
      */
     public void handleCourseMateListSelect(CourseMate courseMate) {
+        recentCourseMate = courseMate;
         logic.setRecentlyProcessedCourseMate(courseMate);
         courseMateDetailPanel.loadCourseMate(courseMate);
+    }
+
+    /**
+     * Returns the logic instance in order to get the most recent processed courseMate
+     */
+
+    public Logic getLogic() {
+        return this.logic;
     }
 }

@@ -25,6 +25,7 @@ import seedu.address.model.coursemate.Email;
 import seedu.address.model.coursemate.Name;
 import seedu.address.model.coursemate.Phone;
 import seedu.address.model.skill.Skill;
+import seedu.address.ui.MainWindow;
 
 /**
  * Edits the details of an existing courseMate in the contact list.
@@ -72,8 +73,12 @@ public class EditCommand extends Command {
         if (index.getZeroBased() >= lastShownList.size()) {
             throw new CommandException(Messages.MESSAGE_INVALID_COURSE_MATE_DISPLAYED_INDEX);
         }
-
-        CourseMate courseMateToEdit = lastShownList.get(index.getZeroBased());
+        CourseMate courseMateToEdit;
+        if (index.getZeroBased() == -1) {
+            courseMateToEdit = MainWindow.recentCourseMate;
+        } else {
+            courseMateToEdit = lastShownList.get(index.getZeroBased());
+        }
         CourseMate editedCourseMate = createEditedCourseMate(courseMateToEdit, editCourseMateDescriptor);
 
         if (!courseMateToEdit.isSameCourseMate(editedCourseMate) && model.hasCourseMate(editedCourseMate)) {

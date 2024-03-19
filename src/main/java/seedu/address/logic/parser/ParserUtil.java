@@ -21,6 +21,7 @@ import seedu.address.model.skill.Skill;
 public class ParserUtil {
 
     public static final String MESSAGE_INVALID_INDEX = "Index is not a non-zero unsigned integer.";
+    public static final String MESSAGE_INVALID_FORMAT = "Index should start with a #.";
 
     /**
      * Parses {@code oneBasedIndex} into an {@code Index} and returns it. Leading and trailing whitespaces will be
@@ -29,10 +30,19 @@ public class ParserUtil {
      */
     public static Index parseIndex(String oneBasedIndex) throws ParseException {
         String trimmedIndex = oneBasedIndex.trim();
-        if (!StringUtil.isNonZeroUnsignedInteger(trimmedIndex)) {
+        if (trimmedIndex.charAt(0) != '#') {
+            throw new ParseException(MESSAGE_INVALID_FORMAT);
+        }
+        if (trimmedIndex.charAt(1) == '#') {
+            return Index.fromOneBased(0);
+        }
+
+        if (!StringUtil.isNonZeroUnsignedInteger(trimmedIndex.substring(1))) {
             throw new ParseException(MESSAGE_INVALID_INDEX);
         }
-        return Index.fromOneBased(Integer.parseInt(trimmedIndex));
+
+
+        return Index.fromOneBased(Integer.parseInt(trimmedIndex.substring(1)));
     }
 
     /**
