@@ -43,7 +43,7 @@ public class DeleteCommand extends Command {
 
         CourseMate courseMateToDelete;
         if (targetIndex.getZeroBased() == -1) {
-            courseMateToDelete = MainWindow.recentCourseMate;
+            courseMateToDelete = MainWindow.getRecentCourseMate();
         } else {
             courseMateToDelete = lastShownList.get(targetIndex.getZeroBased());
         }

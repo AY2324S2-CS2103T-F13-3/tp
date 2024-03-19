@@ -75,7 +75,7 @@ public class EditCommand extends Command {
         }
         CourseMate courseMateToEdit;
         if (index.getZeroBased() == -1) {
-            courseMateToEdit = MainWindow.recentCourseMate;
+            courseMateToEdit = MainWindow.getRecentCourseMate();
         } else {
             courseMateToEdit = lastShownList.get(index.getZeroBased());
         }

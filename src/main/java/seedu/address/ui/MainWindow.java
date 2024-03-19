@@ -24,10 +24,10 @@ import seedu.address.model.coursemate.CourseMate;
  */
 public class MainWindow extends UiPart<Stage> {
 
+    // This field is to keep track which courseMate was last "edited" and showed in the DetailPanel
+    private static CourseMate recentCourseMate;
     private static final String FXML = "MainWindow.fxml";
 
-    // This field is to keep track which courseMate was last "edited" and showed in the DetailPanel
-    public static CourseMate recentCourseMate;
 
     private final Logger logger = LogsCenter.getLogger(getClass());
 
@@ -228,10 +228,9 @@ public class MainWindow extends UiPart<Stage> {
     }
 
     /**
-     * Returns the logic instance in order to get the most recent processed courseMate
+     * Returns most recent course mate that has been "processed" and showed in the Detail Panel
      */
-
-    public Logic getLogic() {
-        return this.logic;
+    public static CourseMate getRecentCourseMate() {
+        return recentCourseMate;
     }
 }

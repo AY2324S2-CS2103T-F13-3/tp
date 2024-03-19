@@ -30,9 +30,10 @@ public class ParserUtil {
      */
     public static Index parseIndex(String oneBasedIndex) throws ParseException {
         String trimmedIndex = oneBasedIndex.trim();
-        if (trimmedIndex.charAt(0) != '#') {
+        if (trimmedIndex.isEmpty() || trimmedIndex.charAt(0) != '#') {
             throw new ParseException(MESSAGE_INVALID_FORMAT);
         }
+
         if (trimmedIndex.charAt(1) == '#') {
             return Index.fromOneBased(0);
         }
@@ -129,7 +130,7 @@ public class ParserUtil {
         }
 
         if (trimmedLabel.charAt(0) == '#') {
-            return new QueryableCourseMate(parseIndex(trimmedLabel.substring(1)));
+            return new QueryableCourseMate(parseIndex(trimmedLabel));
         } else {
             return new QueryableCourseMate(parseName(trimmedLabel));
         }

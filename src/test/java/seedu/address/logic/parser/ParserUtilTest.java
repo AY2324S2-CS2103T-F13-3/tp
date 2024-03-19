@@ -41,16 +41,16 @@ public class ParserUtilTest {
     @Test
     public void parseIndex_outOfRangeInput_throwsParseException() {
         assertThrows(ParseException.class, MESSAGE_INVALID_INDEX, ()
-            -> ParserUtil.parseIndex(Long.toString(Integer.MAX_VALUE + 1)));
+            -> ParserUtil.parseIndex("#" + Long.toString(Integer.MAX_VALUE + 1)));
     }
 
     @Test
     public void parseIndex_validInput_success() throws Exception {
         // No whitespaces
-        assertEquals(INDEX_FIRST_COURSE_MATE, ParserUtil.parseIndex("1"));
+        assertEquals(INDEX_FIRST_COURSE_MATE, ParserUtil.parseIndex("#1"));
 
         // Leading and trailing whitespaces
-        assertEquals(INDEX_FIRST_COURSE_MATE, ParserUtil.parseIndex("  1  "));
+        assertEquals(INDEX_FIRST_COURSE_MATE, ParserUtil.parseIndex("  #1  "));
     }
 
     @Test
