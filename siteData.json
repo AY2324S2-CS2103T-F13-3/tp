@@ -118,7 +118,8 @@
         "search-contacts-with-a-keyword-find": "Search contacts with a keyword: find",
         "deleting-a-contact-delete": "Deleting a contact : delete",
         "create-group-project-create-group": "Create group project: create-group",
-        "add-contacts-to-group-add-member": "Add contacts to group: add-member",
+        "add-coursemates-to-group-add-member": "Add coursemates to group: add-member",
+        "delete-coursemates-from-group-delete-member": "Delete coursemates from group: delete-member",
         "delete-a-group-delete-group": "Delete a group: delete-group",
         "clearing-all-entries-clear": "Clearing all entries : clear",
         "exiting-the-program-exit": "Exiting the program : exit",
@@ -134,7 +135,7 @@
       "src": "index.md",
       "title": "",
       "headings": {
-        "addressbook-level-3": "AddressBook Level-3"
+        "matchmate": "MatchMate"
       },
       "headingKeywords": {}
     },
