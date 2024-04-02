@@ -122,7 +122,7 @@
         "create-group-project-create-group": "Create group project: create-group",
         "add-coursemates-to-group-add-member": "Add coursemates to group: add-member",
         "delete-coursemates-from-group-delete-member": "Delete coursemates from group: delete-member",
-        "edit-the-telegram-chat-url-of-a-group-edit-group": "Edit the telegram chat URL of a group: edit-group",
+        "edit-the-telegram-chat-url-of-a-group-edit-tg-chat-url": "Edit the telegram chat URL of a group: edit-tg-chat-url",
         "delete-a-group-delete-group": "Delete a group: delete-group",
         "clearing-all-entries-clear": "Clearing all entries : clear",
         "exiting-the-program-exit": "Exiting the program : exit",
