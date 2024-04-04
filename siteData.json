@@ -125,8 +125,6 @@
         "delete-coursemates-from-group-delete-member": "Delete coursemates from group: delete-member",
         "give-rating-to-your-coursemates-rate-mate": "Give rating to your courseMates: rate-mate",
         "edit-the-telegram-chat-url-of-a-group-edit-tg-chat-url": "Edit the telegram chat URL of a group: edit-tg-chat-url",
-        "require-skills-in-a-group-require-skill": "Require skills in a group: require-skill",
-        "unrequire-skills-in-a-group-unrequire-skill": "Unrequire skills in a group: unrequire-skill",
         "delete-a-group-delete-group": "Delete a group: delete-group",
         "clearing-all-entries-clear": "Clearing all entries : clear",
         "exiting-the-program-exit": "Exiting the program : exit",
