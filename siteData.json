@@ -106,6 +106,7 @@
     },
     {
       "src": "UserGuide.md",
+      "title": "User Guide",
       "headings": {
         "matchmate-user-guide": "MatchMate User Guide",
         "quick-start": "Quick start",
