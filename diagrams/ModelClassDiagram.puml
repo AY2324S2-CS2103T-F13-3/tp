@@ -43,7 +43,7 @@ UserPrefs .up.|> ReadOnlyUserPrefs
 GroupList .up.|> ReadOnlyGroupList
 
 ContactList *--> "1" UniqueCourseMateList
-UniqueCourseMateList --> "~* all" CourseMate
+UniqueCourseMateList --> "~*" CourseMate
 CourseMate *--> Name
 CourseMate *--> Phone
 CourseMate *--> Email
