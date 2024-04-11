@@ -20,6 +20,7 @@ Class Email
 Class Name
 Class Phone
 Class Skill
+Class TelegramChat
 
 Class UniqueGroupList
 Class Group
@@ -44,15 +45,18 @@ GroupList .up.|> ReadOnlyGroupList
 
 ContactList *--> "1" UniqueCourseMateList
 UniqueCourseMateList --> "~*" CourseMate
-CourseMate *--> Name
-CourseMate *--> Phone
-CourseMate *--> Email
-CourseMate *--> "*" Skill
+CourseMate *--> "1" Name
+CourseMate *--> "0..1" Phone
+CourseMate *--> "1" Email
+CourseMate *-> "*" Skill
+CourseMate *--> "0..1" TelegramChat
 
 GroupList *--> "1" UniqueGroupList
 UniqueGroupList --> "* all" Group
 Group --|> UniqueCourseMateList
-Group *--> Name
+Group *--> "1" Name
+Group *--> "0..1" TelegramChat
+Group *-> "*" Skill
 
 CourseMate -[hidden]up--> I
 UniqueCourseMateList -[hidden]right-> I

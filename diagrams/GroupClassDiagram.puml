@@ -27,7 +27,7 @@ UniqueCourseMateList --> "~*" CourseMate
 
 Group --up|> UniqueCourseMateList
 Group *--> "1" Name
-Group --> "~*" Skill
+Group *-> "~*" Skill
 Group *--> "0..1" TelegramChat
 
 CourseMate -[hidden]up--> I
