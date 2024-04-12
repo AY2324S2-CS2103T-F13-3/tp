@@ -54,5 +54,6 @@ JsonAdaptedCourseMate --> "*" JsonAdaptedSkill
 JsonGroupListStorage ..> JsonSerializableGroupList
 JsonSerializableGroupList --> "*" JsonAdaptedGroup
 JsonAdaptedGroup --> "*" JsonAdaptedCourseMate
+JsonAdaptedGroup --> "*" JsonAdaptedSkill
 
 @enduml
