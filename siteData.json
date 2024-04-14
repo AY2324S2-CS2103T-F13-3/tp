@@ -126,6 +126,8 @@
       "title": "User Guide",
       "headings": {
         "matchmate-user-guide": "MatchMate User Guide",
+        "navigating-the-user-guide": "Navigating the User Guide",
+        "glossary": "Glossary",
         "quick-start": "Quick start",
         "user-interface": "User Interface",
         "commands-general": "Commands: General",
@@ -156,6 +158,7 @@
         "save-and-load-the-state-of-app": "Save and load the state of app",
         "editing-the-data-file": "Editing the data file",
         "faq": "FAQ",
+        "q-how-do-i-save-the-changes-that-i-have-made-a-all-your-data-is-automatically-saved-so-there-s-no-need-to-manually-save-it": "Q: How do I save the changes that I have made?\nA: All your data is automatically saved, so there's no need to manually save it.",
         "known-issues": "Known issues",
         "command-summary": "Command summary"
       },
