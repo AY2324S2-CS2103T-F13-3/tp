@@ -30,10 +30,10 @@ Ready to connect with other like-minded students and create the best group possi
 **CourseMate Management**
 - **[Add a courseMate](#adding-a-coursemate-add)**: Met a new friend? Add them to your contact list with `add`.
 - **[Edit a courseMate](#editing-a-coursemate-edit)**: Wrongly inputted some details? No worries! Edit your course mate's information using  `edit`.
-- **[Add skills to a courseMate](#add-a-skill-to-a-coursemate-add-skill)**: Does your friend have notable skills that you want to take note of? If so, then you can use `add-skill`.
-- **[Delete skills from a courseMate](#delete-a-skill-from-a-coursemate-delete-skill)**: Mistyped the skill name? Delete the skill by using `delete-skill`.
-- **[Finding courseMates](#search-coursemates-with-keywords-find-mate)**: Looking for someone specific? The `find-mate` command does exactly that!
-- **[Rate courseMate](#give-rating-to-your-coursemates-rate-mate)**: Had a good/bad experience with your course mates? `rate-mate` helps you to keep track of those experiences!
+- **[Add skills to a courseMate](#add-skills-to-a-coursemate-add-skill)**: Does your friend have notable skills that you want to take note of? If so, then you can use `add-skill`.
+- **[Delete skills from a courseMate](#delete-skills-from-a-coursemate-delete-skill)**: Mistyped the skill name? Delete the skill by using `delete-skill`.
+- **[Finding courseMates](#finding-coursemates-with-keywords-find-mate)**: Looking for someone specific? The `find-mate` command does exactly that!
+- **[Rate courseMate](#rate-a-coursemate-rate-mate)**: Had a good/bad experience with your course mates? `rate-mate` helps you to keep track of those experiences!
 - **[List all courseMates](#listing-all-coursemates-and-groups-list)**: Shows all course mates and groups with `list`.
 - **[Delete a courseMate](#deleting-a-coursemate-delete)**: Burnt a bridge with someone? You can always remove them from your list with `delete`.
 
