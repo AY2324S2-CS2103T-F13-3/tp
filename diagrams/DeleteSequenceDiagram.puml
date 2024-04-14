@@ -49,7 +49,7 @@ deactivate MatchMateParser
 LogicManager -> DeleteCommand : execute(m)
 activate DeleteCommand
 
-DeleteCommand -> Model : deletePerson(1)
+DeleteCommand -> Model : deleteCourseMate(...)
 activate Model
 
 Model --> DeleteCommand
